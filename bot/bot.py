@@ -32,7 +32,7 @@ async def fetch_prefix(_, msg: Message) -> Iterable[str]:
     return prefix
 
 
-bot = Bot(command_prefix=fetch_prefix, case_insensitive=True, intents=(Intents.all()))
+bot = Bot(command_prefix=fetch_prefix, case_insensitive=True, intents=(Intents.all()), strip_after_prefix=True)
 bot.remove_command("help")
 
 
